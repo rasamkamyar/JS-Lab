@@ -1,9 +1,4 @@
-
-
-
 function exercise(num) {
-
-    
   let count = parseInt(num / 10);
 
   return count;
@@ -36,5 +31,3 @@ function index(num) {
   sum += num;
   console.log(sum);
 }
-
-
