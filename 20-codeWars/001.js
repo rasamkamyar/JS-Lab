@@ -1,5 +1,5 @@
 function stringy(size) {
-    debugger;
+  debugger;
   sum = "";
 
   for (i = 0; i < size; i++) {
@@ -13,6 +13,32 @@ function stringy(size) {
   return sum;
 }
 
+function mathOperator(operator, number1, number2) {
+  debugger;
+  if (operator == "+") {
+    return number1 + number2;
+  }
+  if (operator == "-") {
+    return number1 - number2;
+  }
+  if (operator == "*") {
+    return number1 * number2;
+  }
+  if (operator == "/") {
+    return number1 / number2;
+  }
+}
 
+function sumMulti(n,m) {
+    debugger;
+  if (n > m) {
+    return "INVALID";
+  }
 
-
+  let sum = 0;
+  
+  for (let i = n; i < m; i += n) {
+    sum += i;
+  }
+  return sum;
+}

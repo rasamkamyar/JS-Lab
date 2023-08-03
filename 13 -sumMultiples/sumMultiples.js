@@ -1,4 +1,4 @@
-function sumMultiples(n, m) {
+  function sumMultiples(n, m) {
   if (n > m) {
     return "invalid";
   }
