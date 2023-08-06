@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.images{
+    margin-top: 100px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.images--item{
+
+    width: 150px;
+    height: 150px;
+}
+
+
+.selected{
+    border-radius: 8px;
+    border: 2px solid red;
+}
