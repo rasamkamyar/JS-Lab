@@ -1,11 +1,17 @@
-function whichOne(element) {
-  let thing = element.src;
-  let bigImg = document.getElementById("bigImage");
 
-  bigImg.src = thing;
+let bigImage = document.getElementById("bigImage"); 
+let thumbs = document.querySelectorAll(".images img");
 
-  let selectOne = document.querySelector(".selected");
 
-  selectOne.classList.remove("selected");
-  element.classList.add("selected");
+function changeImage(){
+
+  let thumbSrc = this.getAttribute("src")
+  bigImage.setAttribute("src", thumbSrc);
 }
+
+for (let i = 0; i < thumbs.length; i++) {
+  thumbs[i].onclick = changeImage;
+  
+}
+
+
