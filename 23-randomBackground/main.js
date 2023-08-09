@@ -19,3 +19,25 @@ window.onload = function randomBackground() {
 //sakhtare >>> `url(${imgs[random]})`
 
 
+function setup(){
+
+  var container = document.getElementById("container");
+
+  for (var i = 0; i < 10; i++) {
+      var box = document.createElement("div");
+      container.appendChild(box);
+      var colors = random_bg_color();
+      box.style.backgroundColor = colors;
+
+  }
+}
+
+function random_bg_color(){
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  return bgColor;
+}
+
+setup()

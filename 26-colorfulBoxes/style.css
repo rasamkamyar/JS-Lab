@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__box {
+  border: 1px solid rgb(26, 24, 24);
+  width: 150px;
+  height: 150px;
+}

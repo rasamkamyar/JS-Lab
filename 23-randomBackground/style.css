@@ -9,3 +9,22 @@ body {
 }
 
 
+
+/* 
+let boxes = document.querySelectorAll(".box");
+
+function colofulBoxes() {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+
+  let color = `rgb(${red} , ${green} , ${blue})`;
+
+  this.style.background = color;
+}
+
+for (let i = 0; i < boxes.length; i++) {
+  
+  boxes[i].onclick = colofulBoxes;
+} */
+
