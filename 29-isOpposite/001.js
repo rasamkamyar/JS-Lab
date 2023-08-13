@@ -1,6 +1,6 @@
 function isOpposite(s1, s2) {
   
-    if (s1 === "") return false;
+    if (s1 === "") {return false};
 
   let opposite = "";
 
