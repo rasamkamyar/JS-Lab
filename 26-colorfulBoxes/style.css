@@ -1,11 +1,22 @@
-.main {
+body {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.main__box {
-  border: 1px solid rgb(26, 24, 24);
-  width: 150px;
-  height: 150px;
+div {
+  background-color: #444;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(4, 150px);
+  grid-gap: 4px;
+}
+
+.disable {
+  pointer-events: none;
 }

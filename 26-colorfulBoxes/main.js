@@ -1,17 +1,19 @@
 document.body.style.backgroundColor = "black";
 
-let boxes = document.querySelectorAll(".main__box");
+const divs = document.querySelectorAll("div");
 
-function colorfulBoxes() {
+function colorBox(event) {
+  event.target.style.backgroundColor = randomColor();
+  event.target.classList.add("disable");
+}
+function randomColor() {
   let red = Math.floor(Math.random() * 256);
   let green = Math.floor(Math.random() * 256);
   let blue = Math.floor(Math.random() * 256);
 
-  let color = `rgb(${red},${green},${blue})`;
-
-  this.style.backgroundColor = color;
+  return `rgb(${red} , ${green} , ${blue})`;
 }
 
-for (let index = 0; index < boxes.length; index++) {
-  boxes[index].onclick = colorfulBoxes;
+for (const div of divs) {
+  div.addEventListener("click", colorBox);
 }
