@@ -1,7 +1,7 @@
 let fahrenheit = +prompt("fahrenheit");
 
-function celsius() {
-  return ((fahrenheit - 32) * 5) / 9;
+function celsius(far) {
+  return ((far - 32) * 5) / 9;
 }
 
-alert(celsius());
+alert(celsius(fahrenheit));
