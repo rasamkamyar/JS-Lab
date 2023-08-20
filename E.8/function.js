@@ -1,13 +1,36 @@
-function justZero(a) {
+// //
+// let sum=0;
+// let number;
 
-    if (a == 0) {
-        return true;
-    };
+// let result = addition();
 
-    if (a != 0, b != 0, c != 0, d != 0) {
-        
-            let result = a + b + c + d;
-            return result;
-        
-    };
-};
+// document.write(result);
+
+// function addition() {
+//     sum += number;
+//     return sum;
+// }
+
+// function input(number){
+// do {
+//     number = Number(prompt("enter a number"));
+//     addition();
+// } while (number !== 0);}
+
+// input(number);
+
+let number = +prompt("enter a number");
+let sum = 0;
+
+function justZeroOne(input) {
+  if (input === 0) {
+    return true;
+  }
+  else{
+        sum += input
+       while(input !== 0) 
+      return sum
+  }
+}
+
+console.log(justZeroOne(number));
