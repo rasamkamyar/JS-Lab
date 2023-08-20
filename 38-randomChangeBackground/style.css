@@ -1,0 +1,33 @@
+.content {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1rem;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+.arrows button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0072bc;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+#next {
+  left: 1rem;
+}
+
+#prev {
+  right: 1rem;
+}
