@@ -1,56 +1,35 @@
-let userReq = new XMLHttpRequest();
-userReq.open("GET", "https://jsonplaceholder.ir/users");
+let select = document.querySelector("select");
+let USERS = [];
 
-function getUsers() {
-let userData =  JSON.parse(userReq.responseText);
-renderUser(userData)
+function userAjax() {
+  let userRequest = new XMLHttpRequest();
+  userRequest.open("GET", "https://jsonplaceholder.ir/users");
+  userRequest.addEventListener("load", () => {
+    getUserData(userRequest);
+  });
+  userRequest.send();
 }
 
-function renderUser(items) {
-let temp = items.map((item) => {
-    const{id,name,username,email,password,avatar,address,phone,website,company} = item
-    return `<div>    
-    ${id},
-    ${name},
-    ${username},
-    ${email},
-    ${password},
-    ${avatar},
-    ${address},
-    ${phone},
-    ${website},
-    ${company},
-  </div>
-        
-        `;
+function getUserData(userRequest) {
+  let data = JSON.parse(userRequest.responseText);
+  renderUser(data);
+  USERS = data;
+}
+
+function renderUser(list) {
+  let template = list.map((user) => {
+    return `
+    <option value="${user.id}">${user.name}</option>
+    `;
   });
 
-  document.body.innerHTML = temp.join("")
+  select.innerHTML = template.join("");
 }
 
-userReq.addEventListener("load", getUsers);
-userReq.send();
+function changeUser(event) {
+  const userId = event.target.value;
+  postAjax(userId);
+}
 
-
-// {
-//     "id": 1,
-//     "name": "محمدرضا راد",
-//     "username": "Morad",
-//     "email": "morad@april.biz",
-//     "password": "Ab485652",
-//     "avatar": "https://avatars.dicebear.com/api/male/mamad.svg",
-//     "address": {
-//       "country": "ایران",
-//       "city": "تبریز",
-//       "street": "خیابان امام",
-//       "alley": "کوچه بهشتی",
-//       "number": 168,
-//       "geo": {
-//         "lat": "38.066667",
-//         "lng": "46.3"
-//       }
-//     },
-//     "phone": "+989143548471",
-//     "website": "http://hildegard.org",
-//     "company": "آتیه سازان شرق"
-//   }
+userAjax();
+select.addEventListener("change", changeUser);
