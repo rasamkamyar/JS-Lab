@@ -33,4 +33,4 @@ function render(list) {
 
   root.innerHTML = template.join("");
 }
-postAjax()
+postAjax();
