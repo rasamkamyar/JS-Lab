@@ -1,0 +1,32 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(16, 100, 4);
+  color: beige;
+  padding: 5rem;
+  width: 30%;
+  height: 400px;
+  margin: 2rem;
+}
+body {
+  background-color: rgb(42, 40, 40);
+}
+
+.footer {
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid;
+  flex-direction: column;
+}
