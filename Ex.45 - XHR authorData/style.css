@@ -10,18 +10,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(16, 100, 4);
-  color: beige;
+  background-color: rgb(251, 239, 23);
+  color: rgb(18, 18, 17);
   padding: 5rem;
   width: 30%;
   height: 400px;
   margin: 2rem;
+  border-radius: 8px;
 }
 body {
   background-color: rgb(42, 40, 40);
 }
 
 .footer {
+  display: none !important;
+  line-height: 2;
   display: flex;
   margin: 3rem;
   align-items: center;
@@ -29,4 +32,16 @@ body {
   padding: 1rem;
   border: 1px solid;
   flex-direction: column;
+}
+
+img{
+  width: 50px;
+  height: 50px;
+  padding: 2rem;
+}
+
+
+
+#show-more{
+  cursor: pointer;
 }
