@@ -22,7 +22,8 @@ function getData(request) {
 function render(list) {
   let template = list.map((post) => {
     let user = USERS.find((user) => user.id === post.userId);
-    return `<div class = "posts">
+    return `
+    <div class = "posts">
         <span>نویسنده: ${user?.name}</span>
         <br>
         <span>پست شماره: ${post.id}</span>

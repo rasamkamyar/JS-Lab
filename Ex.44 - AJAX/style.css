@@ -1,7 +1,42 @@
+body {
+  margin: 0 auto;
+}
 .posts {
   padding: 2rem;
   border: 1px solid;
   background-color: rgb(33, 31, 31);
   color: white;
-  margin: 1rem;
+  margin-top: 1rem;
+  width: 80%;
+  justify-items: center;
+}
+
+.posts:first-child {
+  margin-top: 7rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(12, 11, 11, 0.8);
+  z-index: 2;
+  color: white;
+  flex-direction: row-reverse;
+  margin-bottom: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+select {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
